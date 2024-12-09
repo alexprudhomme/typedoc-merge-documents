@@ -1,0 +1,14 @@
+{
+  "name": "typedoc-merge-documents",
+  "version": "1.0.0",
+  "scripts": {
+    "build:typedoc": "npm run build:typedoc:package1 && npm run build:typedoc:package2 && npm run build:typedoc:merge",
+    "build:typedoc:package1": "typedoc --json docs-json/package1.json --options src/package2/typedoc.json",
+    "build:typedoc:package2": "typedoc --json docs-json/package2.json --options src/package1/typedoc.json",
+    "build:typedoc:merge": "typedoc --entryPointStrategy merge \"docs-json/*.json\""
+  },
+  "devDependencies": {
+    "typescript": "5.4.5",
+    "typedoc": "0.26.11"
+  }
+}
