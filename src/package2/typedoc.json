@@ -1,4 +1,5 @@
 {
+  "name": "package2",
   "entryPoints": ["index.ts"],
   "readme": "none", // Disable readme on main page to instead add it as a document
   "projectDocuments": ["hi-2.md"]
